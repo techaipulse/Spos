@@ -1,0 +1,139 @@
+﻿GROUP B 
+Assignment- 3 
+Title: Write to simulate CPU Scheduling Algorithms: FCFS , SJF (Preemptive), Priority (Non-Preemptive) and Round Robin (Preemptive). 
+Objectives : - To understand OS & SCHEDULING Concepts - To implement  Scheduling FCFS, SJF, RR & Priority algorithms - To study about Scheduling and  scheduler 
+Problem Statement : Write a Java program (using OOP features) to implement  following scheduling algorithms: FCFS , SJF, Priority and Round Robin .  
+Outcomes: After completion of this assignment students will be able to: - Knowledge Scheduling policies - Compare different scheduling algorithms 
+ Software Requirements: JDK/Eclipse  
+Hardware Requirement: - M/C Lenovo Think center M700 Ci3,6100,6th Gen.  H81, 4GB RAM ,500GB HDD 
+Theory Concepts: CPU Scheduling: 
+• CPU scheduling refers to a set of policies and mechanisms built into the operating  systems that govern the order in which the work to be done by a computer system is  completed. 
+• Scheduler is an OS module that selects the next job to be admitted into the system  and next process to run.
+• The primary objective of scheduling is to optimize system performance in  accordance with the criteria deemed most important by the system designers.  
+What is scheduling?  
+Scheduling is defined as the process that governs the order in which the work is to  be done. Scheduling is done in the areas where more no. of jobs or works are to be  performed. Then it requires some plan i.e. scheduling that means how the jobs are to  be performed i.e. order. CPU scheduling is best example of scheduling.  
+What is scheduler? 
+1. Scheduler in an OS module that selects the next job to be admitted into the  system and the next process to run.  
+2. Primary objective of the scheduler is to optimize system performance in  accordance with the criteria deemed by the system designers. 
+In short, scheduler is that module of OS which schedules the programs in an  efficient manner. 
+ Necessity of scheduling  
+• Scheduling is required when no. of jobs are to be performed by CPU.  • Scheduling provides mechanism to give order to each work to be done.  • Primary objective of scheduling is to optimise system performance.  • Scheduling provides the ease to CPU to execute the processes in efficient manner.  
+Scheduling Criteria :  
+CPU Utilization: 
+Keep the CPU as busy as possible. It range from 0 to 100%. In practice, it range  from 40 to 90%. 
+Throughput:  
+Throughput is the rate at which processes are completed per unit of time. 
+Turnaround time:  
+This is the how long a process takes to execute a process. It is calculated as the  time gap between the submission of a process and its completion.  
+Waiting time:  
+Waiting time is the sum of the time periods spent in waiting in the ready queue.  
+Response time:  
+Response time is the time it takes to start responding from submission time. It is  calculated as the amount of time it takes from when a request was submitted until  the first response is produced.  
+Non-preemptive Scheduling :  
+In non-preemptive mode, once if a process enters into running state, it continues to  execute until it terminates or blocks itself to wait for Input/Output or by requesting  some operating system service.  
+Preemptive Scheduling :  
+In preemptive mode, currently running process may be interrupted and moved to the  ready State by the operating system. When a new process arrives or when an  interrupt occurs, preemptive policies may incur greater overhead than non preemptive version but preemptive version may provide better service. It is desirable  to maximize CPU utilization and throughput, and to minimize turnaround time,  waiting time and response time. 
+Types of scheduling Algorithms  
+• In general, scheduling disciplines may be pre-emptive or non-pre-emptive .  • In batch, non-pre-emptive implies that once scheduled, a selected job turns to  completion.  
+There are different types of scheduling algorithms such as: 
+FCFS(First Come First Serve)  
+SJF(Short Job First)  
+Priority scheduling  
+Round Robin Scheduling algorithm  
+First Come First Serve Algorithm  
+• FCFS is working on the simplest scheduling discipline.  
+• The workload is simply processed in an order of their arrival, with no pre-emption.  • FCFS scheduling may result into poor performance.  
+• Since there is no discrimination on the basis of required services, short jobs may  considerable in turn around delay and waiting time.  
+Advantages  
+● Better for long processes  
+● Simple method (i.e., minimum overhead on processor)  
+● No starvation  
+Disadvantages  
+● Convoy effect occurs. Even very small process should wait for its turn to come  to utilize the CPU. Short process behind long process results in lower CPU  utilization.  
+● Throughput is not emphasized.
+  
+
+Shortest Job First Algorithm :  
+● It is also known as shortest job first, or SJF  
+● This is a non-preemptive, pre-emptive scheduling algorithm.  ● Best approach to minimize waiting time.  
+● Easy to implement in Batch systems where required CPU time is known in  advance. Impossible to implement in interactive systems where required CPU  time is not known.  
+● The processer should know in advance how much time process will take. 
+Advantages  
+● It gives superior turnaround time performance to shortest process next  because a short job is given immediate preference to a running longer job.  ● Throughput is high. 
+Disadvantages  
+● Elapsed time (i.e., execution-completed-time) must be recorded, it results an  additional overhead on the processor.  
+● Starvation may be possible for the longer processes. 
+This algorithm is divided into two types:  
+• Pre-emptive SJF  
+• Non-pre-emptive SJF  
+• Pre-emptive SJF Algorithm:  
+In this type of SJF, the shortest job is executed 1st. the job having least arrival time  is taken first for execution. It is executed till the next job arrival is reached.
+  
+
+Non-pre-emptive SJF Algorithm:  
+In this algorithm, job having less burst time is selected 1st for execution. It is  executed for its total burst time and then the next job having least burst time is  selected.  
+  
+
+Round Robin Scheduling : 
+● Round Robin is the preemptive process scheduling algorithm.  ● Each process is provided a fix time to execute, it is called a quantum.  ● Once a process is executed for a given time period, it is preempted and other  process executes for a given time period.  
+● Context switching is used to save states of preempted process 
+Advantages  
+● Round-robin is effective in a general-purpose, times-sharing system or  transaction-processing system.  
+● Fair treatment for all the processes.  
+● Overhead on processor is low.  
+● Overhead on processor is low.  
+● Good response time for short processes.  
+Disadvantages  
+● Care must be taken in choosing quantum value.  
+● Processing overhead is there in handling clock interrupt.  
+● Throughput is low if time quantum is too small.
+  
+
+Priority Scheduling :  
+● Priority scheduling is a non-preemptive algorithm and one of the most  common scheduling algorithms in batch systems.  
+● Each process is assigned a priority. Process with highest priority is to be  executed first and so on.  
+● Processes with same priority are executed on first come first served basis.  ● Priority can be decided based on memory requirements, time requirements or  any other resource requirement. 
+Advantage  
+Good response for the highest priority processes.  
+Disadvantage  
+Starvation may be possible for the lowest priority processes. 
+  
+
+8. Algorithms(procedure) :  
+FCFS : 
+Step 1: Start the process 
+Step 2: Accept the number of processes in the ready Queue  
+Step 3: For each process in the ready Q, assign the process id and accept the CPU  burst time  
+Step 4: Set the waiting of the first process as ‘0’ and its burst time as its turn around  time  
+Step 5: for each process in the Ready Q calculate (a) Waiting time for process(n)=  waiting time of process (n-1) + Burst time of process(n-1) (b) Turn around time for  Process(n)= waiting time of Process(n)+ Burst time for process(n)  Step 6: Calculate (a) Average waiting time = Total waiting Time / Number of process  (b) Average Turnaround time = Total Turnaround Time / Number of process  Step 7: Stop the process 
+SJF :  
+Step 1: Start the process  
+Step 2: Accept the number of processes in the ready Queue  
+Step 3: For each process in the ready Q, assign the process id and accept the CPU  burst time  
+Step 4: Start the Ready Q according the shortest Burst time by sorting according to  lowest to highest burst time.  
+Step 5: Set the waiting time of the first process as ‘0’ and its turnaround time as its  burst time.  
+RR :  
+Step 1: Start the process  
+Step 2: Accept the number of processes in the ready Queue and time quantum (or)  time slice  
+Step 3: For each process in the ready Q, assign the process id and accept the CPU  burst time  
+Step 4: Calculate the no. of time slices for each process where No. of time slice for  process(n) = burst time process(n)/time slice  
+Step 5: If the burst time is less than the time slice then the no. of time slices =1.  Step 6: Consider the ready queue is a circular Q, calculate 
+(a) Waiting time for process(n) = waiting time of process(n-1)+ burst time of  process(n-1 ) + the time difference in getting the CPU from process(n-1)  (b) Turn around time for process(n) = waiting time of process(n) + burst time of  process(n)+ the time difference in getting CPU from process(n).  Step 7:  
+Calculate  
+(e) Average waiting time = Total waiting Time / Number of process  (f) Average Turnaround time = Total Turnaround Time / Number of process  Step 8: Stop the process.  
+Priority Scheduling :  
+Algorithms :  
+Step 1: Start the process  
+Step 2: Accept the number of processes in the ready Queue  
+Step 3: For each process in the ready Q, assign the process id and accept the CPU  burst time, priority  
+Step 4: Start the Ready Q according the priority by sorting according to lowest to  highest burst time and process.  
+Step 5: Set the waiting time of the first process as ‘0’ and its turnaround time as its  burst time. 
+Step 6: For each process in the ready queue, calculate  
+(e) Waiting time for process(n)= waiting time of process (n-1) + Burst time of  process(n-1)  
+(f) Turn around time for Process(n)= waiting time of Process(n)+ Burst time for  process(n) Step 6: Calculate (g) Average waiting time = Total waiting Time / Number  of process (h) Average Turnaround time = Total Turnaround Time / Number of  process  
+Step 7: Stop the process  
+Conclusion: 
+Hence we have studied that-  
+• CPU scheduling concepts like context switching, types of schedulers, different  timing parameter like waiting time, turnaround time, burst time, etc.  • Different CPU scheduling algorithms like FIFO, SJF,Etc. 
+• FIFO is the simplest for implementation but produces large waiting times and  reduces system performance.  
+• SJF allows the process having shortest burst time to execute first.
